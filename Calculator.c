@@ -19,8 +19,13 @@ void arithmetic(char ch) {
    else if(ch == '-')
    printf("Substraction is : %d",num1 - num2);
    
-   else if(ch =='/')
-   printf("Division of %d and %d is : %d",num1,num2,num1/num2);
+   else if(ch =='/') {
+       if((num1 || num2 == 0) || (num1 || num2 < 0))
+       printf("Enter a valid Number!");
+       else
+      printf("Division of %d and %d is : %d",num1,num2,num1/num2);
+   }
+   
    
    else if(ch == '*')
    printf("Multiply of %d and %d is : %d",num1,num2,num1 * num2);
@@ -48,10 +53,10 @@ void bitwise(int num) {
    printf("Bitwise OR of %d and %d is : %d",num1,num2, num1 | num2);
    
    else if(num == 3)
-   printf("Bitwise NOT of %d and %d is : %d",num1,num2, ~num1, ~num2 );
+   printf("Bitwise NOT of %d and %d is : %d and %d",num1,num2, ~num1, ~num2 );
    
    else if(num == 4) 
-   printf("Bitwise XOR(Exclusive OR) of %d and %d is : %d",num1,num2, num1 ^ num2);
+   printf("Bitwise XOR(Exclusive OR) of %d and %d is : %d and %d",num1,num2, num1 ^ num2);
 }
 // Function Declaration Scientific Operations
 void scientific(char ch,int x) {
